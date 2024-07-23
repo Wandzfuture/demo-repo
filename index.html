@@ -3,66 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>BreakfastBuddy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>Food Delight</h1>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>BreakfastBuddy</h1>
+        <p>Your ultimate canteen management solution</p>
+        <button onclick="window.location.href='/menu';">Get Started</button>
+    </div>
 
-    <section id="home">
-        <h2>Welcome to Food Delight</h2>
-        <p>Experience the best culinary delights from around the world.</p>
-        <button onclick="scrollToSection('menu')">Explore Our Menu</button>
-    </section>
+    <!-- Navigation Section -->
+    <div class="nav">
+        <a href="#menu">Menu</a>
+        <a href="#register">Register</a>
+        <a href="#login">Login</a>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+    </div>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Food Delight is a premier restaurant offering a variety of delicious meals.</p>
-    </section>
-
-    <section id="menu">
-        <h2>Our Menu</h2>
-        <div class="menu-item">
-            <h3>Pizza</h3>
-            <p>A classic Italian dish with a variety of toppings.</p>
+    <!-- Features Section -->
+    <div id="features" class="features">
+        <h2>Features</h2>
+        <div class="feature-item">
+            <img src="{{ url_for('static', filename='images/https://th.bing.com/th/id/OIP.GEICZtdkrwskAYBgtOZsagHaKw?rs=1&pid=ImgDetMain') }}" alt="Menu Management">
+            <h3>Menu Management</h3>
+            <p>Easily add, update, and remove menu items with an intuitive interface. Manage categories and pricing to keep your menu up-to-date and organized.</p>
         </div>
-        <div class="menu-item">
-            <h3>Burger</h3>
-            <p>Juicy and delicious burgers made with the finest ingredients.</p>
+        <div class="feature-item">
+            <img src="{{ url_for('static', filename='images/feature2.png') }}" alt="User Registration">
+            <h3>User Registration</h3>
+            <p>Allow users to register and create accounts. Manage user profiles and permissions to ensure secure access to different features of the application.</p>
         </div>
-        <!-- Add more menu items as needed -->
-    </section>
+        <div class="feature-item">
+            <img src="{{ url_for('static', filename='images/feature3.png') }}" alt="Order Processing">
+            <h3>Order Processing</h3>
+            <p>Streamline order handling with real-time updates. Track orders from creation to completion and manage order statuses efficiently.</p>
+        </div>
+    </div>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Food Delight. All rights reserved.</p>
-    </footer>
-
-    <script src="scripts.js"></script>
+    <!-- About Section -->
+    <div id="about" class="about">
+        <h2>About</h2>
+        <p>BreakfastBuddy was inspired by the need to simplify canteen management. Initially, managing a small café's operations proved to be cumbersome, so we created this application to streamline menu management, user registration, and order processing. 
+    </div>
 </body>
 </html>
